@@ -1,6 +1,10 @@
 <resources>
+
+    <!-- General -->
     <string name="app_name">PinkOctopusProject</string>
 
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <!-- Menu Items -->
+    <string name="menu_main_settings">Settings</string>
+    <string name="menu_main_about">About</string>
+
 </resources>
