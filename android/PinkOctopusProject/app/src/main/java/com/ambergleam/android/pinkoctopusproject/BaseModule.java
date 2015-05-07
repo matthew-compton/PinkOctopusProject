@@ -1,7 +1,7 @@
 package com.ambergleam.android.pinkoctopusproject;
 
-import com.ambergleam.android.pinkoctopusproject.controller.MainActivity;
-import com.ambergleam.android.pinkoctopusproject.controller.MainFragment;
+import com.ambergleam.android.pinkoctopusproject.controller.LibraryActivity;
+import com.ambergleam.android.pinkoctopusproject.controller.LibraryFragment;
 import com.ambergleam.android.pinkoctopusproject.model.Library;
 
 import javax.inject.Singleton;
@@ -11,8 +11,8 @@ import dagger.Provides;
 
 @Module(
         injects = {
-                MainActivity.class,
-                MainFragment.class
+                LibraryActivity.class,
+                LibraryFragment.class
         },
         complete = true)
 public class BaseModule {

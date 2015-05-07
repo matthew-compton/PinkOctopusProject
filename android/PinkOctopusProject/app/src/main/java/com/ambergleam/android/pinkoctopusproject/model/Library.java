@@ -14,10 +14,21 @@ public class Library {
     @Inject
     public Library() {
         mStoryList = new ArrayList<>();
+        mStoryList.add(new Story("Octave", "The Pink Octopus", "http://images.clipartpanda.com/cute-baby-octopus-clipart-cartoon_octopus_0515-0908-2422-4351_smu.jpg", null));
+        mStoryList.add(new Story("Octave", "The Pink Octopus", "http://images.clipartpanda.com/cute-baby-octopus-clipart-cartoon_octopus_0515-0908-2422-4351_smu.jpg", null));
+        mStoryList.add(new Story("Octave", "The Pink Octopus", "http://images.clipartpanda.com/cute-baby-octopus-clipart-cartoon_octopus_0515-0908-2422-4351_smu.jpg", null));
     }
 
     public List<Story> getStoryList() {
         return mStoryList;
+    }
+
+    public Story get(int position) {
+        return mStoryList.get(position);
+    }
+
+    public int size() {
+        return mStoryList.size();
     }
 
 }

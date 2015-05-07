@@ -4,20 +4,20 @@ import java.util.List;
 
 public class Story {
 
-    private String mName;
+    private String mTitle;
     private String mDescription;
     private String mImageUrl;
     private List<Page> mPageList;
 
-    public Story(String name, String description, String imageUrl, List<Page> pageList) {
-        mName = name;
+    public Story(String title, String description, String imageUrl, List<Page> pageList) {
+        mTitle = title;
         mDescription = description;
         mImageUrl = imageUrl;
         mPageList = pageList;
     }
 
-    public String getName() {
-        return mName;
+    public String getTitle() {
+        return mTitle;
     }
 
     public String getDescription() {

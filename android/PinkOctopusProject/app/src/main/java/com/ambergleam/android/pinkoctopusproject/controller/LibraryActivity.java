@@ -5,11 +5,11 @@ import android.support.v4.app.Fragment;
 import com.ambergleam.android.pinkoctopusproject.BaseActivity;
 
 
-public class MainActivity extends BaseActivity {
+public class LibraryActivity extends BaseActivity {
 
     @Override
     protected Fragment createFragment() {
-        return new MainFragment();
+        return new LibraryFragment();
     }
 
     @Override

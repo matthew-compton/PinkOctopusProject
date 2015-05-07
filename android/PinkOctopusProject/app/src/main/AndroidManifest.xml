@@ -10,7 +10,7 @@
         android:name=".BaseApplication"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".controller.MainActivity"
+            android:name=".controller.LibraryActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
