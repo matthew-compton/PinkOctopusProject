@@ -9,4 +9,8 @@
         <item name="android:textColor">@color/text_toolbar_secondary</item>
     </style>
 
+    <style name="CardViewStyle" parent="android:Widget.TextView">
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+    </style>
+
 </resources>

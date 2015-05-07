@@ -26,6 +26,7 @@ import javax.inject.Inject;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
+import timber.log.Timber;
 
 public class LibraryFragment extends BaseFragment {
 
@@ -81,6 +82,10 @@ public class LibraryFragment extends BaseFragment {
         public LibraryHolder(View view) {
             super(view);
             ButterKnife.inject(this, view);
+            view.setOnClickListener(v -> {
+                Timber.i("Story clicked: " + mStory.getTitle());
+                // TODO
+            });
         }
 
         public void bindStory(Story story) {
