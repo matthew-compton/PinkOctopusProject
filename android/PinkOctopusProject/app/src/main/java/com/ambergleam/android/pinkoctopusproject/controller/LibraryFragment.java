@@ -59,10 +59,10 @@ public class LibraryFragment extends BaseFragment {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.menu_library_settings:
-                // TODO
+                startActivity(SettingsActivity.newIntent(getActivity()));
                 return true;
             case R.id.menu_library_about:
-                // TODO
+                startActivity(AboutActivity.newIntent(getActivity()));
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
