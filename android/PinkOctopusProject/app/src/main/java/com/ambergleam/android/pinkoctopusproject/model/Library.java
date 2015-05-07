@@ -14,13 +14,13 @@ public class Library {
     @Inject
     public Library() {
         mStoryList = new ArrayList<>();
-        mStoryList.add(new Story("Octave", "The Pink Octopus", "http://images.clipartpanda.com/cute-baby-octopus-clipart-cartoon_octopus_0515-0908-2422-4351_smu.jpg", null));
-        mStoryList.add(new Story("Octave", "The Pink Octopus", "http://images.clipartpanda.com/cute-baby-octopus-clipart-cartoon_octopus_0515-0908-2422-4351_smu.jpg", null));
-        mStoryList.add(new Story("Octave", "The Pink Octopus", "http://images.clipartpanda.com/cute-baby-octopus-clipart-cartoon_octopus_0515-0908-2422-4351_smu.jpg", null));
+        addFakeStories();
     }
 
-    public List<Story> getStoryList() {
-        return mStoryList;
+    private void addFakeStories() {
+        mStoryList.add(new Story("Octave 1", "The Pink Octopus", "http://images.clipartpanda.com/cute-baby-octopus-clipart-cartoon_octopus_0515-0908-2422-4351_smu.jpg", null));
+        mStoryList.add(new Story("Octave 2", "The Pink Octopus", "http://images.clipartpanda.com/cute-baby-octopus-clipart-cartoon_octopus_0515-0908-2422-4351_smu.jpg", null));
+        mStoryList.add(new Story("Octave 3", "The Pink Octopus", "http://images.clipartpanda.com/cute-baby-octopus-clipart-cartoon_octopus_0515-0908-2422-4351_smu.jpg", null));
     }
 
     public Story get(int position) {

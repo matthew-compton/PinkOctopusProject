@@ -18,6 +18,7 @@ import com.ambergleam.android.pinkoctopusproject.BaseFragment;
 import com.ambergleam.android.pinkoctopusproject.R;
 import com.ambergleam.android.pinkoctopusproject.model.Library;
 import com.ambergleam.android.pinkoctopusproject.model.Story;
+import com.ambergleam.android.pinkoctopusproject.view.SpacesItemDecoration;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
@@ -29,6 +30,7 @@ import butterknife.InjectView;
 public class LibraryFragment extends BaseFragment {
 
     @Inject Library mLibrary;
+
     @InjectView(R.id.fragment_library_recyclerView) RecyclerView mLibraryRecyclerView;
 
     @Override
@@ -40,6 +42,7 @@ public class LibraryFragment extends BaseFragment {
         mLibraryRecyclerView.setHasFixedSize(true);
         mLibraryRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         mLibraryRecyclerView.setItemAnimator(new DefaultItemAnimator());
+        mLibraryRecyclerView.addItemDecoration(new SpacesItemDecoration(getResources().getDimensionPixelSize(R.dimen.padding_normal)));
         mLibraryRecyclerView.setAdapter(new LibraryAdapter());
 
         return layout;
