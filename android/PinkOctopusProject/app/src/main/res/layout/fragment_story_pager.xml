@@ -9,15 +9,22 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
-    <com.viewpagerindicator.CirclePageIndicator
-        android:id="@+id/fragment_story_pager_circlePageIndicator"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="?attr/actionBarSize"
         android:layout_gravity="bottom"
-        android:layout_marginBottom="@dimen/padding_normal"
-        app:fillColor="@color/primary"
-        app:pageColor="@color/primary_light"
-        app:radius="5dp"
-        app:strokeWidth="0dp"/>
+        android:background="#22000000">
+
+        <com.viewpagerindicator.CirclePageIndicator
+            android:id="@+id/fragment_story_pager_circlePageIndicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:fillColor="@color/primary"
+            app:pageColor="@color/primary_light"
+            app:radius="5dp"
+            app:strokeWidth="0dp"/>
+
+    </FrameLayout>
 
 </FrameLayout>
