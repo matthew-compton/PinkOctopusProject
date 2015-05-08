@@ -1,6 +1,8 @@
 package com.ambergleam.android.pinkoctopusproject.model;
 
-public class Page {
+import java.io.Serializable;
+
+public class Page implements Serializable {
 
     private String mCaption;
     private String mImageUrl;

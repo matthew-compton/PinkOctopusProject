@@ -6,7 +6,11 @@ import com.ambergleam.android.pinkoctopusproject.controller.LibraryActivity;
 import com.ambergleam.android.pinkoctopusproject.controller.LibraryFragment;
 import com.ambergleam.android.pinkoctopusproject.controller.SettingsActivity;
 import com.ambergleam.android.pinkoctopusproject.controller.SettingsFragment;
+import com.ambergleam.android.pinkoctopusproject.controller.StoryActivity;
+import com.ambergleam.android.pinkoctopusproject.controller.StoryPageFragment;
+import com.ambergleam.android.pinkoctopusproject.controller.StoryPagerFragment;
 import com.ambergleam.android.pinkoctopusproject.model.Library;
+import com.ambergleam.android.pinkoctopusproject.model.LibraryMock;
 
 import javax.inject.Singleton;
 
@@ -17,6 +21,9 @@ import dagger.Provides;
         injects = {
                 LibraryActivity.class,
                 LibraryFragment.class,
+                StoryActivity.class,
+                StoryPagerFragment.class,
+                StoryPageFragment.class,
                 AboutActivity.class,
                 AboutFragment.class,
                 SettingsActivity.class,
@@ -34,7 +41,7 @@ public class BaseModule {
     @Provides
     @Singleton
     public Library provideLibrary() {
-        return new Library();
+        return new LibraryMock();
     }
 
 }

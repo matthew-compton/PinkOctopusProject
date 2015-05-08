@@ -29,7 +29,6 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:support-v4:22.1.1'
     compile 'com.android.support:appcompat-v7:22.1.1'
     compile 'com.android.support:recyclerview-v7:22.0.0'
@@ -42,5 +41,13 @@ dependencies {
     compile 'com.squareup.dagger:dagger:1.2.2'
     provided 'com.squareup.dagger:dagger-compiler:1.2.2'
 
+    compile 'com.viewpagerindicator:viewpagerindicator:2.4.1@aar'
     compile 'net.orfjackal.retrolambda:retrolambda:1.6.1'
+}
+
+repositories {
+    mavenCentral()
+    flatDir {
+        dirs 'libs'
+    }
 }
