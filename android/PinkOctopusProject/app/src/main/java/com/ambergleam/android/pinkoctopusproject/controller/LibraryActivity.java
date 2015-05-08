@@ -17,4 +17,9 @@ public class LibraryActivity extends BaseActivity {
         return false;
     }
 
+    @Override
+    protected boolean isToolbarEnabled() {
+        return true;
+    }
+
 }

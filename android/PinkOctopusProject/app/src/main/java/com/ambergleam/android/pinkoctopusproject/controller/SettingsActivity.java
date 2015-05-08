@@ -22,4 +22,9 @@ public class SettingsActivity extends BaseActivity {
         return true;
     }
 
+    @Override
+    protected boolean isToolbarEnabled() {
+        return true;
+    }
+
 }

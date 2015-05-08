@@ -19,20 +19,24 @@ import java.lang.reflect.Field;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
+import butterknife.Optional;
 import timber.log.Timber;
 
 public abstract class BaseActivity extends AppCompatActivity {
 
+    @Optional
     @InjectView(R.id.toolbar) public Toolbar mToolbar;
 
     protected abstract Fragment createFragment();
 
     protected abstract boolean isUpButtonEnabled();
 
+    protected abstract boolean isToolbarEnabled();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_base);
+        setContentView(isToolbarEnabled() ? R.layout.activity_base_toolbar : R.layout.activity_base);
         BaseApplication.get(BaseActivity.this).inject(this);
         ButterKnife.inject(this);
 
@@ -43,9 +47,11 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
     protected void setupToolbar() {
-        setSupportActionBar(mToolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(isUpButtonEnabled());
-        getSupportActionBar().setHomeButtonEnabled(isUpButtonEnabled());
+        if (isToolbarEnabled()) {
+            setSupportActionBar(mToolbar);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(isUpButtonEnabled());
+            getSupportActionBar().setHomeButtonEnabled(isUpButtonEnabled());
+        }
     }
 
     protected void setupOverflowButton() {

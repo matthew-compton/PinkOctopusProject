@@ -23,4 +23,9 @@ public class AboutActivity extends BaseActivity {
         return true;
     }
 
+    @Override
+    protected boolean isToolbarEnabled() {
+        return true;
+    }
+
 }

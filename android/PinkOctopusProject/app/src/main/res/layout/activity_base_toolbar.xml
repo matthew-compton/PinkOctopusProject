@@ -5,6 +5,8 @@
               android:background="@color/background"
               android:orientation="vertical">
 
+    <include layout="@layout/toolbar"/>
+
     <FrameLayout
         android:id="@+id/activity_base_container"
         android:layout_width="match_parent"

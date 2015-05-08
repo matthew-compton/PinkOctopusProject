@@ -29,4 +29,9 @@ public class StoryActivity extends BaseActivity {
         return false;
     }
 
+    @Override
+    protected boolean isToolbarEnabled() {
+        return false;
+    }
+
 }
